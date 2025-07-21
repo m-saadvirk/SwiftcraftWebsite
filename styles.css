@@ -1,0 +1,282 @@
+/* Tailwind Configuration */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;700;900&display=swap");
+
+/* Custom CSS Variables and Utilities */
+:root {
+  --primary-gradient: linear-gradient(135deg, #00f5ff, #ff00ff);
+  --secondary-gradient: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+/* Font Families */
+.font-orbitron {
+  font-family: "Orbitron", monospace;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a2e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #00f5ff, #ff00ff);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #ff00ff, #00f5ff);
+}
+
+/* Glassmorphism */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Neon Effects */
+.neon-blue {
+  box-shadow: 0 0 20px #00f5ff, 0 0 40px #00f5ff, 0 0 60px #00f5ff;
+}
+
+.neon-pink {
+  box-shadow: 0 0 20px #ff00ff, 0 0 40px #ff00ff, 0 0 60px #ff00ff;
+}
+
+.neon-text {
+  text-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor;
+}
+
+/* Cyber Grid Background */
+.cyber-grid {
+  background-image: linear-gradient(rgba(0, 245, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 245, 255, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+/* Animations */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 20px #00f5ff;
+  }
+  50% {
+    box-shadow: 0 0 40px #00f5ff, 0 0 60px #00f5ff;
+  }
+}
+
+@keyframes scroll-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(12px);
+  }
+}
+
+/* Floating Elements */
+.floating-element-1 {
+  animation: rotate 20s linear infinite;
+}
+
+.floating-element-2 {
+  animation: rotate 15s linear infinite reverse;
+}
+
+.floating-product {
+  animation: float 8s ease-in-out infinite;
+}
+
+.floating-dot-1 {
+  animation: float 3s ease-in-out infinite;
+}
+
+.floating-dot-2 {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+  animation: float 2s ease-in-out infinite;
+}
+
+.scroll-dot {
+  animation: scroll-bounce 2s ease-in-out infinite;
+}
+
+/* Navigation Link Hover Effect */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #00f5ff, #ff00ff);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Button Hover Effects */
+.btn-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px #00f5ff;
+}
+
+.btn-secondary:hover {
+  transform: scale(1.05);
+}
+
+.icon-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Feature Icon Hover */
+.feature-icon:hover {
+  transform: scale(1.1) translateY(-5px);
+}
+
+/* Product Card Hover Effects */
+.product-card {
+  transition: all 0.5s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-10px) scale(1.02);
+}
+
+.product-card:hover .product-image {
+  transform: scale(1.1);
+}
+
+/* Gallery Item Hover */
+.gallery-item:hover .gallery-image {
+  transform: scale(1.1);
+}
+
+/* Slide Transitions */
+.slide {
+  transition: opacity 0.6s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+/* Intersection Observer Animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slide-in-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.8s ease;
+}
+
+.slide-in-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slide-in-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 0.8s ease;
+}
+
+.slide-in-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+
+  .hero-content p {
+    font-size: 1.125rem;
+  }
+
+  .feature-icon {
+    gap: 0.5rem;
+  }
+}
+
+/* Loading Animation */
+.loading {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Category Button Active State */
+.category-btn.active {
+  background: linear-gradient(90deg, #00f5ff, #ff00ff);
+  box-shadow: 0 0 15px rgba(0, 245, 255, 0.5);
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Utilities */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-gpu {
+  transform: translateZ(0);
+}
+
+/* Dark Mode Enhancements */
+body {
+  background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+  min-height: 100vh;
+}
