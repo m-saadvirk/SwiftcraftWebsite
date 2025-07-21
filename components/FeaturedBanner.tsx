@@ -22,27 +22,26 @@ export default function FeaturedBanner() {
 
             <h2 className="text-4xl md:text-5xl font-bold font-orbitron mb-6 neon-text">
               <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-                Premium Wireless Headphones
+                Premium Quailty Mobiles   
               </span>
             </h2>
 
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Experience crystal-clear audio with our premium wireless headphones. Advanced noise cancellation and
-              superior comfort for all-day listening pleasure.
+              Experience crystal-clear Dispaly with our premium Mobiles. Advanced AI feature and superior comfort for all-day  pleasure.
             </p>
 
             <div className="flex items-center gap-6 mb-8">
               <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-400">40mm</div>
-                <div className="text-sm text-gray-400">Drivers</div>
+                <div className="text-3xl font-bold text-cyan-400">40 mega pixel</div>
+                <div className="text-sm text-gray-400">{"Camera "}</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-purple-400">30hrs</div>
+                <div className="text-3xl font-bold text-purple-400">9 hrs</div>
                 <div className="text-sm text-gray-400">Battery Life</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-pink-400">ANC</div>
-                <div className="text-sm text-gray-400">Noise Cancel</div>
+                <div className="text-3xl font-bold text-pink-400">{"Amoled"}</div>
+                <div className="text-sm text-gray-400">{"Display"}</div>
               </div>
             </div>
 
@@ -83,6 +82,11 @@ export default function FeaturedBanner() {
                   className="object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+
+                {/* 3D Headphone Model */}
+                <div className="absolute inset-0 flex items-center justify-center">
+                  
+                </div>
               </div>
 
               {/* Floating elements */}
